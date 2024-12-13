@@ -1,6 +1,6 @@
-
+respo
 const apiUrl = "https://api.github.com/users/Ochiname/repos";
-const apiKey = "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"; // Directly access API_KEY from the environment
+const apiKey = Process.env.API_KEY; // Directly access API_KEY from the environment
 
 console.log("API Key:", apiKey); // Debugging to ensure it's loaded
 
@@ -9,7 +9,7 @@ const img = [
     "https://img.freepik.com/free-vector/flat-design-portfolio-template-design_52683-80880.jpg?ga=GA1.1.428427330.1724148117&semt=ais_hybrid",   
     "https://img.freepik.com/free-vector/weather-icon-collection_1294-69.jpg?t=st=1733270521~exp=1733274121~hmac=b56c819c31843866ff4d961378f4a98b2d270fbb647dd31ae31435e8ad952acc&w=740",
     "https://img.freepik.com/free-vector/self-checkout-concept-illustration_114360-2228.jpg?t=st=1733270424~exp=1733274024~hmac=0eee00d4fbd31b936cbca8ab72767df971ff822588e20d6574b01e560d76668c&w=740",
-    "https://img.freepik.com/free-photo/3d-illustration-hand-putting-tick-paper_107791-15903.jpg?t=st=1733270582~exp=1733274182~hmac=65f934a15708a89206b0203f3cc03db9185e7c9d4d8bd9383b05dafcfc506d10&w=740"
+    "https://img.freepik.com/free-photo/3d-illustration-hand-putting-tick-paper_107791-15903.jpg?t=st=1733270582~exp=1733274182~hmac=65f934a15708a89206b0203f3cc03db9185e7c9d4d8bd9383b05dafcfc506d10&w=740",
 ];
 
 const fetchGitHubRepos = async () => {
@@ -21,7 +21,7 @@ const fetchGitHubRepos = async () => {
         });
 
         if (!response.ok) {
-            throw new Error(`Error: ${response.status}`);
+            throw new Error(`Error: API ERROR`);
         }
 
         const repos = await response.json();
