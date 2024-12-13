@@ -1,5 +1,5 @@
 const apiUrl = "https://api.github.com/users/Ochiname/repos";
-const apiKey = "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"; // Directly access API_KEY from the environment
+const apiKey = "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"; // Directly access API_KEY from the environment
 
 
 console.log("API Key:", apiKey); // Debugging to ensure it's loaded
